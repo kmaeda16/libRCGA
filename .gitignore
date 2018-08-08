@@ -1,5 +1,5 @@
-.o
-.a
-.exe
-.out
-.dat
+*.o
+*.a
+*.exe
+*.out
+*.dat
