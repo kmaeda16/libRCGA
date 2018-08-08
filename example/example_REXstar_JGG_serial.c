@@ -53,7 +53,7 @@ int main(int argc, char **argv)
 	time_t *t0;
 	int n_gene, n_generation, n_population, n_parent, n_children,
 		selection_type, n_constraint, output_intvl;
-	double t_rexstar, allowable_error, Pf;
+	double t_rexstar, vtr, Pf;
 	char *out_transition, *out_solution, *out_population;
 	int seed;
 	long t_limit;
@@ -68,7 +68,7 @@ int main(int argc, char **argv)
 	n_children   = 50;   // Number of children.
 	t_rexstar    = 6.0;  // t (step size) for REXstar. 2.5 - 15 is recommended.
 	selection_type = 0;  // 0: Best individuals are selected from children (Kobayashi 2009), 1: From Family (Kimura at al., 2015)
-	allowable_error = -1e+10; // Solution is an individual with the objective function (f) <= allowable_error and the penalty function (phi) = 0.
+	vtr = -1e+10; // Objective function value to be reached. Solution is an individual with the objective function (f) <= vtr and the penalty function (phi) = 0.
 	t_limit = 60*60;  // Time limit (sec).
 	n_constraint = 2; // Number of constraints. If you have any constraint, this must be zero.
 	Pf = 0.45;        // Pf for stochastic ranking sort. 0 <= Pf <= 1. Pf matters only if n_constraint >= 1. Pf = 0 indicates naive ranking.
@@ -81,7 +81,7 @@ int main(int argc, char **argv)
 
 	// Initialization.
 	RCGAInitial(&argc,&argv,seed,n_gene,n_generation,n_population,
-		n_parent,n_children,t_rexstar,selection_type,allowable_error,t_limit,
+		n_parent,n_children,t_rexstar,selection_type,vtr,t_limit,
 		n_constraint,Pf,output_intvl,out_transition,out_solution,out_population,
 		fitnessfun, decodingfun,
 		&Param,&Population,&best,&t0);

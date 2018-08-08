@@ -9,7 +9,7 @@ void RCGA(RCGAParam *Param, Chromosome **Population, Chromosome *best, time_t *t
 {
 	int i, index;
 	int n_population, n_gene, n_constraint, n_generation, output_intvl;
-	double allowable_error;
+	double vtr;
 	long t_limit;
 	char *out_transition;
 	DecodingFun decodingfun;
@@ -20,7 +20,7 @@ void RCGA(RCGAParam *Param, Chromosome **Population, Chromosome *best, time_t *t
 	n_constraint = Param->n_constraint;
 	n_generation = Param->n_generation;
 	output_intvl = Param->output_intvl;
-	allowable_error = Param->allowable_error;
+	vtr = Param->vtr;
 	t_limit = Param->t_limit;
 	out_transition = Param->out_transition;
 	decodingfun = Param->decodingfun;
@@ -35,7 +35,7 @@ void RCGA(RCGAParam *Param, Chromosome **Population, Chromosome *best, time_t *t
 		writeTransition(t0,i,out_transition,best,n_gene,n_constraint,decodingfun);
 		flg_printed = 1;
 	}
-	if( (best->phi == 0 && best->f <= allowable_error) || getElapsedTime(t0) >= t_limit ) goto end;
+	if( (best->phi == 0 && best->f <= vtr) || getElapsedTime(t0) >= t_limit ) goto end;
 
 	while(i < n_generation){
 		i++;
@@ -50,7 +50,7 @@ void RCGA(RCGAParam *Param, Chromosome **Population, Chromosome *best, time_t *t
 			writeTransition(t0,i,out_transition,best,n_gene,n_constraint,decodingfun);
 			flg_printed = 1;
 		}
-		if( (best->phi == 0 && best->f <= allowable_error) || getElapsedTime(t0) >= t_limit ) goto end;
+		if( (best->phi == 0 && best->f <= vtr) || getElapsedTime(t0) >= t_limit ) goto end;
 	}
 
 end:
@@ -217,7 +217,7 @@ void UNDX(RCGAParam *Param, Chromosome *p1, Chromosome *p2, Chromosome *p3, Chro
 
 
 void RCGAInitial(int *argc, char ***argv, int seed, int n_gene, int n_generation, int n_population,
-	int n_children, double allowable_error, long t_limit,
+	int n_children, double vtr, long t_limit,
 	int n_constraint, double Pf, int output_intvl, char *out_transition, char *out_solution, char *out_population,
 	FitnessFun fitnessfun, DecodingFun decodingfun,
 	RCGAParam **Param, Chromosome ***Population, Chromosome **best, time_t **t0)
@@ -229,7 +229,7 @@ void RCGAInitial(int *argc, char ***argv, int seed, int n_gene, int n_generation
 	(*Param)->n_generation = n_generation;
 	(*Param)->n_population = n_population;
 	(*Param)->n_children = n_children;
-	(*Param)->allowable_error = allowable_error;
+	(*Param)->vtr = vtr;
 	(*Param)->t_limit = t_limit;
 	(*Param)->n_constraint = n_constraint;
 	(*Param)->Pf = Pf;
