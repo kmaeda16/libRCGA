@@ -1,7 +1,7 @@
 
-***************
-  libRCGA-1.2
-***************
+*****************
+  libRCGA-1.2.1
+*****************
 
 
 Thank you for using libRCGA!
@@ -19,6 +19,7 @@ Release Note:
 Jan 11 2018: libRCGA-1.0 released.
 Jan 14 2018: libRCGA-1.1 released. Bug fixed.
 Aug  8 2018: libRCGA-1.2 released. Variable name changed. Exit codes changed.
+Sep  5 2018: libRCGA-1.2.1 released. Citation information corrected.
 
 
 Requirements:
@@ -30,8 +31,8 @@ Requirements:
 
 Installation:
 
-1. Extract libRCGA-x.x.tar.gz anywhere you like to install libRCGA by typing "tar xzf libRCGA-x.x.tar.gz" at your command prompt.
-2. Change the current directory to "libRCGA-x.x" by typing "cd libRCGA-x.x".
+1. Extract libRCGA-x.x.x.tar.gz anywhere you like to install libRCGA by typing "tar xzf libRCGA-x.x.x.tar.gz" at your command prompt.
+2. Change the current directory to "libRCGA-x.x.x" by typing "cd libRCGA-x.x.x".
 3. Modify "Makefile" if you need, and type "make". If you use GCC with -O2, then no modification is needed.
 4. If you find libundxmgg_serial.a, libundxmgg_parallel.a, librexstarjgg_serial.a, librexstarjgg_parallel.a, in the directory "lib", libRCGA is successfully installed. If you do not have MPI on your machine, *_parallel.a cannot be created. Still, you can use the serial version of libRCGA, i.e. *_serial.a.
 
@@ -43,7 +44,7 @@ Four example source codes (example_*_*.c) in the directory "example" illustrate 
 
 Uninstallation:
 
-Installation of libRCGA does not change any files or directories outside libRCGA-x.x. Thus, all you have to do for uninstallation is to delete libRCGA-x.x by typing "rm -r libRCGA-x.x".
+Installation of libRCGA does not change any files or directories outside libRCGA-x.x.x. Thus, all you have to do for uninstallation is to delete libRCGA-x.x.x by typing "rm -r libRCGA-x.x.x".
 
 
 Citation:
