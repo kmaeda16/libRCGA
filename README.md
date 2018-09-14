@@ -1,12 +1,12 @@
 
 *****************
-  libRCGA-1.2.1
+  libRCGA-1.2.2
 *****************
 
 
 Thank you for using libRCGA!
 
-libRCGA is a C library for real-coded genetic algorithms (RCGAs). Currently, two RCGAs, UNDX/MGG and REXstar/JGG, are implemented. For constrained optimization problems, the stochastic ranking can be used. RCGAs are paralleled by MPI. For details, see the original paper: Kazuhiro Maeda, Fred C. Boogerd, and Hiroyuki Kurata, libRCGA: a C library for real-coded genetic algorithms for rapid parameter estimation of kinetic models, IPSJ Transactions on Bioinformatics, 11: 31-40, 2018.
+libRCGA is a C library for real-coded genetic algorithms (RCGAs). Currently, two RCGAs, UNDX/MGG and REXstar/JGG, are implemented. For constrained optimization problems, the stochastic ranking can be used. RCGAs are paralleled by MPI. For details, see the original paper: Kazuhiro Maeda, Fred C. Boogerd, and Hiroyuki Kurata, libRCGA: a C library for real-coded genetic algorithms for rapid parameter estimation of kinetic models, IPSJ Transactions on Bioinformatics, 11: 31-40, 2018 (https://www.jstage.jst.go.jp/article/ipsjtbio/11/0/11_31/_article/-char/en).
 
 
 License:
@@ -20,7 +20,7 @@ Jan 11 2018: libRCGA-1.0 released.
 Jan 14 2018: libRCGA-1.1 released. Bug fixed.
 Aug  8 2018: libRCGA-1.2 released. Variable name changed. Exit codes changed.
 Sep  5 2018: libRCGA-1.2.1 released. Citation information corrected.
-
+Sep 14 2018: libRCGA-1.2.2 released. Article URL added.
 
 Requirements:
 
