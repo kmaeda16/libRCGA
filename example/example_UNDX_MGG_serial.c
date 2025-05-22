@@ -25,7 +25,7 @@ This source code includes the below three functions.
 To solve your own problem, you need to modify these three functions.
 
 Compilation:
-gcc example_UNDX_MGG_serial.c ../lib/libundxmgg_serial.a -I../include -o example_UNDX_MGG_serial_executable
+gcc example_UNDX_MGG_serial.c ../lib/libundxmgg_serial.a -I../include -o example_UNDX_MGG_serial_executable -lm
 
 Execution:
 ./example_UNDX_MGG_serial_executable

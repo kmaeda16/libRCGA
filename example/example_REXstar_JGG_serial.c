@@ -25,7 +25,7 @@ This source code includes the below three functions.
 To solve your own problem, you need to modify these three functions.
 
 Compilation:
-gcc example_REXstar_JGG_serial.c ../lib/librexstarjgg_serial.a -I../include -o example_REXstar_JGG_serial_executable
+gcc example_REXstar_JGG_serial.c ../lib/librexstarjgg_serial.a -I../include -o example_REXstar_JGG_serial_executable -lm
 
 Execution:
 ./example_REXstar_JGG_serial_executable

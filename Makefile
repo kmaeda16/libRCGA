@@ -1,5 +1,5 @@
-
-CC = gcc
+CC = /usr/bin/gcc # CHANGE HERE
+MPICC = /usr/bin/mpicc # CHANGE HERE
 CFLAGS = -Wall -O2
 
 INCDIR = include
@@ -57,7 +57,7 @@ lib/$(TGT3).a: $(OBJS3)
 	(ar rcv lib/$(TGT3).a $(OBJS3); ranlib lib/$(TGT3).a)
 
 $(SRCDIR)/$(RCGATYPE3).o: $(PREREQS3)
-	(cd $(SRCDIR); $(CC) $(CFLAGS) -I../$(INCDIR) -c $(RCGATYPE3).c)
+	(cd $(SRCDIR); $(MPICC) $(CFLAGS) -I../$(INCDIR) -c $(RCGATYPE3).c)
 
 
 # ---------------- librexstarjgg_parallel.a ---------------- #
@@ -70,7 +70,7 @@ lib/$(TGT4).a: $(OBJS4)
 	(ar rcv lib/$(TGT4).a $(OBJS4); ranlib lib/$(TGT4).a)
 
 $(SRCDIR)/$(RCGATYPE4).o: $(PREREQS4)
-	(cd $(SRCDIR); $(CC) $(CFLAGS) -I../$(INCDIR) -c $(RCGATYPE4).c)
+	(cd $(SRCDIR); $(MPICC) $(CFLAGS) -I../$(INCDIR) -c $(RCGATYPE4).c)
 
 
 # ---------------- Shared.o ---------------- #

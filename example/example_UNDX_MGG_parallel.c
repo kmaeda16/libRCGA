@@ -25,7 +25,7 @@ This source code includes the below three functions.
 To solve your own problem, you need to modify these three functions.
 
 Compilation:
-mpicc example_UNDX_MGG_parallel.c ../lib/libundxmgg_parallel.a -I../include -o example_UNDX_MGG_parallel_executable
+mpicc example_UNDX_MGG_parallel.c ../lib/libundxmgg_parallel.a -I../include -o example_UNDX_MGG_parallel_executable -lm
 
 Execution (two processor cores are used):
 mpirun -np 2 ./example_UNDX_MGG_parallel_executable

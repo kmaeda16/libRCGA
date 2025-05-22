@@ -25,7 +25,7 @@ This source code includes the below three functions.
 To solve your own problem, you need to modify these three functions.
 
 Compilation:
-mpicc example_REXstar_JGG_parallel.c ../lib/librexstarjgg_parallel.a -I../include -o example_REXstar_JGG_parallel_executable
+mpicc example_REXstar_JGG_parallel.c ../lib/librexstarjgg_parallel.a -I../include -o example_REXstar_JGG_parallel_executable -lm
 
 Execution (two processor cores are used):
 mpirun -np 2 ./example_REXstar_JGG_parallel_executable
